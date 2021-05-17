@@ -6,7 +6,6 @@ export default function CocheDetails(props: any) {
   const coches: any[] = GetCoches();
   const { id }: any = useParams();
   let cocheId: any;
-  console.log("props", props.Children);
 
   function getIdUsuario() {
     return props.Children;
@@ -23,11 +22,7 @@ export default function CocheDetails(props: any) {
   }
 
   function cocheSeleccionado(coche: any) {
-    console.log(coche.id, id);
-
     if (coche.id === id) {
-      console.log("a entrado");
-
       cocheId = (
         <div className="card-img">
           <img

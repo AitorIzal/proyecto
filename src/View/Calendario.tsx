@@ -14,21 +14,8 @@ export function Calendario(props: any) {
   const { from, to } = state;
   const modifiers = { start: from, end: to };
   const today: Date = new Date();
-  const reservas: any[] = GetReservas();
-  const idCoche = props.Children;
   let form = new FormData();
   let error: string = "";
-  console.log(props);
-
-  function comprobacion() {
-    reservas.forEach(reserva => {
-      console.log("reserva", reserva.idCoche);
-
-      if (idCoche === reserva.idCoche) {
-        console.log(reserva.fechaEntrega);
-      }
-    });
-  }
 
   function getInitialState() {
     return {
@@ -42,10 +29,6 @@ export function Calendario(props: any) {
     setState(range);
   }
 
-  console.log(new Date());
-
-  comprobacion();
-
   async function reservar() {
     await axios
       .post(url, form)
@@ -58,9 +41,6 @@ export function Calendario(props: any) {
   }
 
   function comprobarReserva() {
-    console.log(from);
-    console.log(to);
-
     if (
       from === undefined ||
       from === null ||
@@ -68,11 +48,9 @@ export function Calendario(props: any) {
       to === null
     ) {
       error = "Seleccione la fecha de recogida y de devuelta del coche";
-      console.log(error);
     } else {
       if (props.getId === "0") {
         error = "Deves iniciar sesion para poder hacer una reserva";
-        console.log(error);
       } else {
         const inicio: any = from;
         let fechaEntrega: any;
@@ -90,7 +68,6 @@ export function Calendario(props: any) {
             (inicio.getMonth() + 1) +
             "-" +
             inicio.getDate();
-          console.log(fechaEntrega);
         }
 
         const final: any = to;
@@ -109,9 +86,7 @@ export function Calendario(props: any) {
             (final.getMonth() + 1) +
             "-" +
             final.getDate();
-          console.log(fechaEntrega);
         }
-        console.log(fechaDevuelta);
 
         form.append("idCoche", props.Children);
         form.append("idUsuario", props.getId);

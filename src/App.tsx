@@ -14,7 +14,6 @@ function App() {
 
   const getId = (idData: any) => {
     setId(idData);
-    console.log("this is id", id);
   };
 
   return (

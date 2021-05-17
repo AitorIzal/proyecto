@@ -21,12 +21,9 @@ export default function Registrarse(props: any) {
     respuesta: ""
   });
 
-  console.log(props);
-
   const sumbitData = async (event: any) => {
     event.preventDefault();
     comprobarErrores();
-    console.log("let error:", error);
 
     if (!error) {
       let form = new FormData();
@@ -57,14 +54,11 @@ export default function Registrarse(props: any) {
   };
 
   function handleChange(event: any) {
-    console.log("esta cambaindo datos");
-
     const { name, value } = event.target;
     setUser(prevState => ({
       ...prevState,
       [name]: value
     }));
-    console.log(user);
   }
 
   function comprobarErrores() {
@@ -75,8 +69,6 @@ export default function Registrarse(props: any) {
     }
     usuarios.forEach(usuario => {
       if (user.correo === usuario.correo) {
-        console.log("error en correo, esta repetido");
-
         error = "El correo indicado ya existe";
       }
     });
