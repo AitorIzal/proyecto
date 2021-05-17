@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+.img-coche {
+    width: 355px;
+    height: 250px;
+}
+
+p{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 22.78px;
+    line-height: 32px;
+    color: #d7dcdd;
+}
+
+h5, h1{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+.card-title{
+    color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+.border{
+    border: 1px black solid;
+}
+
+.coche-background{
+    background-color: #2facb2;
+}
+
+.card-group{
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.coche-seleccionado{
+    background-color: #2facb2;
+    width: 60%;
+    margin: auto;
+}
+
+.imagen-coche-detalles{
+    width: 100%;
+
+}

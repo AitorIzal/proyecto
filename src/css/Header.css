@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Shadows+Into+Light&display=swap');
+
+*{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.botones-header{
+    position: relative;
+}
+
+.boton-derecha{
+    position: absolute;
+    right: 0%;
+}
+.header{
+    background-color: #3b4446;
+    width: 100%;
+}
+h1{
+    color: white;
+    margin-top: 25px;
+}
+button
+{
+    margin-top: 25px;
+}
+
+.btn-primary{
+    background-color: #166a8f;
+}
+
+.btn-secondary{
+    background-color: #aeb6b8;
+    
+}
+
+.btn-secondary:hover{
+    background-color: #2facb2;
+    
+}
+
+.btn-primary, .btn-secondary{
+    font-family: 'Shadows Into Light', cursive;
+    font-style: normal;
+    font-weight: 44px;
+    line-height: 32px;
+    color: black;
+}
+
+.nombre-usuario{
+    color: white;
+}
